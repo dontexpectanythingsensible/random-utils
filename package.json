@@ -1,6 +1,6 @@
 {
   "name": "random-utils",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -75,6 +75,7 @@
   },
   "author": "James Tease <james@jamestease.co.uk>",
   "license": "MIT",
+  "credits": "David Zukowski - React starter kit",
   "dependencies": {
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-runtime": "^6.15.0",
