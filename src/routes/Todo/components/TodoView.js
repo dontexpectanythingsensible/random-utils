@@ -2,9 +2,9 @@ import React from 'react';
 
 export const TodoView = () => (
   <ul>
-    <li>Random letter</li>
-    <li>Dice</li>
+    <li><strike>Random letter</strike></li>
     <li>lottery</li>
+    <li>Dice</li>
     <li>coin flip</li>
     <li>about page</li>
     <li>pick from list</li>

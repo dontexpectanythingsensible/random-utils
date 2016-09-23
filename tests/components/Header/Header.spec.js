@@ -19,10 +19,18 @@ describe('(Component) Header', () => {
       )).to.be.true;
     });
 
-    it('Should render a Link to Counter route', () => {
+    it('Should render a Link to Letter route', () => {
       expect(_wrapper.contains(
-        <Link activeClassName='route--active' to='/counter'>
-          Counter
+        <Link activeClassName='route--active' to='/letter'>
+          Letter
+        </Link>
+      )).to.be.true;
+    });
+
+    it('Should render a Link to Lottery route', () => {
+      expect(_wrapper.contains(
+        <Link activeClassName='route--active' to='/lottery'>
+          Lottery
         </Link>
       )).to.be.true;
     });
