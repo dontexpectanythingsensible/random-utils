@@ -6,64 +6,98 @@ function getRandomInt (min, max) {
 
 export default class LotteryView extends React.Component {
   state = {
-    min: 0,
+    min: 1,
     max: 49,
     amount: 7,
     selected: []
   }
 
   handleChange = e => {
-    if (e && e.target && e.target.id) {
-      this.setState({ [e.target.id]: [e.target.value] });
+    let val = +e.target.value;
+
+    if (e && e.target && e.target.name) {
+      if (e.target.name === 'max' && val <= this.state.min) {
+        val = this.state.min + 1;
+      }
+
+      this.setState({ [e.target.name]: +val });
     }
   }
 
   generate = () => {
     let newSelection = [];
     for (let i = 0; i < this.state.amount; i++) {
-      newSelection.push(getRandomInt(this.state.min, this.state.max));
+      let num = getRandomInt(this.state.min, this.state.max);
+      console.log(num, this.state.selected.indexOf(num));
+
+      while (newSelection.indexOf(num) > 0) {
+        num = getRandomInt(this.state.min, this.state.max);
+        console.log('get another!', num);
+      }
+      newSelection.push(num);
     }
 
     this.setState({ selected: newSelection });
   }
 
+  componentWillMount () {
+    this.generate();
+  }
+
+  renderNumber (num, i) {
+    return (
+      <span className='lottery__number' key={ i }>{ num }</span>
+    );
+  }
+
   render () {
     return (
-      <div>
-        <div>choose limit</div>
-        <label htmlFor='min'>Min</label>
-        <input type='number'
-          id='min'
-          step='1'
-          min='0'
-          max='500'
-          placeholder='0'
-          onChange={ this.handleChange }
-          value={ this.state.min } />
+      <div className='lottery'>
 
-        <label htmlFor='max'>Max</label>
-        <input type='number'
-          id='max'
-          step='1'
-          min='1'
-          max='500'
-          placeholder='500'
-          onChange={ this.handleChange }
-          value={ this.state.max } />
+        <form className='form lottery__options'>
+          <label htmlFor='min'>Min</label>
+          <input type='number'
+            name='min'
+            step='1'
+            min='-500'
+            max='500'
+            placeholder='0'
+            onChange={ this.handleChange }
+            value={ this.state.min } />
 
-        <label htmlFor='amount'>Amount</label>
-        <input type='number'
-          id='amount'
-          step='1'
-          min='1'
-          max='20'
-          placeholder='1'
-          onChange={ this.handleChange }
-          value={ this.state.amount } />
+          <label htmlFor='max'>Max</label>
+          <input type='number'
+            name='max'
+            step='1'
+            min='-500'
+            max='500'
+            placeholder='500'
+            onChange={ this.handleChange }
+            value={ this.state.max } />
 
-        <button onClick={ this.generate }>Generate</button>
+          <label htmlFor='amount'>Amount</label>
+          <input type='range'
+            name='amount'
+            min='1'
+            max='20'
+            value={ this.state.amount }
+            onChange={ this.handleChange } />
+          <input type='number'
+            name='amount'
+            step='1'
+            min='1'
+            max='20'
+            placeholder='1'
+            onChange={ this.handleChange }
+            value={ this.state.amount } />
+        </form>
 
-        { this.state.selected.join(' ') }
+        <button className='button lottery__button' onClick={ this.generate }>Generate</button>
+
+        <span className='lottery__numbers'>{ this.state.selected.map(this.renderNumber) }</span>
+
+        <p className='lottery_info'>This will generate the specified number of random numbers between 
+        the set minimum and maximum (inclusive), with no duplicates.</p>
       </div>
     );
   }

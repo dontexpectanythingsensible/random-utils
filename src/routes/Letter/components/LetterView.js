@@ -37,18 +37,20 @@ export default class LetterView extends React.Component {
   render () {
     return (
       <div className='letter__wrapper'>
-        <span className='letter__selected'>{ this.state.letter }</span>
+        <form className='form letter__options'>
+          <label htmlFor='letter__exclude'>
+            Letters to exclude
+            <input className='letter__exclude'
+              onChange={ this.handleChange }
+              placeholder='Letters to exclude' />
+          </label>
+        </form>
         <button className='button letter__button'
           onClick={ this.handleClick }>
             Another
         </button>
 
-        <label htmlFor='letter__exclude'>
-          Letters to exclude
-          <input className='letter__exclude'
-            onChange={ this.handleChange }
-            placeholder='Letters to exclude' />
-        </label>
+        <span className='letter__selected'>{ this.state.letter }</span>
       </div>
     );
   }

@@ -19,3 +19,6 @@ body {
 *:after {
   box-sizing: inherit;
 }
+
+@import 'blocks/letter';
+@import 'blocks/lottery';
