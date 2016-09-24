@@ -4,6 +4,11 @@ function getRandomInt (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// custom sort otherwise you'll get 1, 10, 2, 20
+function compareNumbers(a, b) {
+  return a - b;
+}
+
 export default class LotteryView extends React.Component {
   state = {
     min: 1,
@@ -28,11 +33,9 @@ export default class LotteryView extends React.Component {
     let newSelection = [];
     for (let i = 0; i < this.state.amount; i++) {
       let num = getRandomInt(this.state.min, this.state.max);
-      console.log(num, this.state.selected.indexOf(num));
 
-      while (newSelection.indexOf(num) > 0) {
+      while (newSelection.indexOf(num) >= 0) {
         num = getRandomInt(this.state.min, this.state.max);
-        console.log('get another!', num);
       }
       newSelection.push(num);
     }
@@ -94,7 +97,7 @@ export default class LotteryView extends React.Component {
 
         <button className='button lottery__button' onClick={ this.generate }>Generate</button>
 
-        <span className='lottery__numbers'>{ this.state.selected.map(this.renderNumber) }</span>
+        <span className='lottery__numbers'>{ this.state.selected.sort(compareNumbers).map(this.renderNumber) }</span>
 
         <p className='lottery_info'>This will generate the specified number of random numbers between 
         the set minimum and maximum (inclusive), with no duplicates.</p>

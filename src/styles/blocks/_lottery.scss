@@ -1,10 +1,14 @@
 .lottery__numbers {
     @include output;
-    display: block;
-    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 4rem auto;
 }
 
 .lottery__number {
     display: inline-block;
     margin: auto 1rem;
+    width: 10%;
 }

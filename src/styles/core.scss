@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Source Serif Pro', Georgia, serif;
 }
 
 *,
@@ -20,5 +21,9 @@ body {
   box-sizing: inherit;
 }
 
+@import 'blocks/button';
+@import 'blocks/nav';
+@import 'blocks/container';
+@import 'blocks/form';
 @import 'blocks/letter';
 @import 'blocks/lottery';

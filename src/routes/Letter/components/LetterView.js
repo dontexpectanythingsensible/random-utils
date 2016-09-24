@@ -40,10 +40,11 @@ export default class LetterView extends React.Component {
         <form className='form letter__options'>
           <label htmlFor='letter__exclude'>
             Letters to exclude
-            <input className='letter__exclude'
-              onChange={ this.handleChange }
-              placeholder='Letters to exclude' />
           </label>
+          <input className='letter__exclude'
+            type='text'
+            onChange={ this.handleChange }
+            placeholder='Letters to exclude' />
         </form>
         <button className='button letter__button'
           onClick={ this.handleClick }>

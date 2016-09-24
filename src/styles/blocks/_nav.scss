@@ -1,0 +1,30 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    background: $grey;
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+}
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.nav a,
+.nav a:visited {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
