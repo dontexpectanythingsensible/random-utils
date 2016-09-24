@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'components/Header/Header';
 import { IndexLink, Link } from 'react-router';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('(Component) Header', () => {
   let _wrapper;
@@ -21,7 +21,8 @@ describe('(Component) Header', () => {
       expect(_wrapper.state('visible')).to.equal(true);
       expect(_wrapper.find('.nav')).to.exist;
     });
-  })
+  });
+
   describe('Navigation links...', () => {
     beforeEach(() => {
       _wrapper.setState({ visible: true });

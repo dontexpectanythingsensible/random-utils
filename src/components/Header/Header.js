@@ -20,15 +20,15 @@ export default class Header extends React.Component {
 
         { this.state.visible
           ? <nav className='nav'>
-              <button className='nav__close' onClick={ this.toggle }>Close</button>
-              <ul>
-                <li><IndexLink to='/' activeClassName='route--active' onClick={ this.toggle }>Letter</IndexLink></li>
-                <li><Link to='/lottery' activeClassName='route--active' onClick={ this.toggle }>Lottery</Link></li>
-                <li><Link to='/about' activeClassName='route--active' onClick={ this.toggle }>About</Link></li>
-                <li><Link to='/todo' activeClassName='route--active' onClick={ this.toggle }>Todo</Link></li>
-              </ul>
-            </nav>
-          : null
+            <button className='nav__close' onClick={ this.toggle }>Close</button>
+            <ul>
+              <li><IndexLink to='/' activeClassName='route--active' onClick={ this.toggle }>Letter</IndexLink></li>
+              <li><Link to='/lottery' activeClassName='route--active' onClick={ this.toggle }>Lottery</Link></li>
+              <li><Link to='/about' activeClassName='route--active' onClick={ this.toggle }>About</Link></li>
+              <li><Link to='/todo' activeClassName='route--active' onClick={ this.toggle }>Todo</Link></li>
+            </ul>
+          </nav>
+        : null
         }
       </header>
     );
