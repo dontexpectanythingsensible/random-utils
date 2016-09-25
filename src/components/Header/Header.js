@@ -16,7 +16,7 @@ export default class Header extends React.Component {
   render () {
     return (
       <header className='header'>
-        <button className='nav__toggle' onClick={ this.toggle }>Nav</button>
+        <button className='nav__toggle' onClick={ this.toggle }>Menu</button>
 
         { this.state.visible
           ? <nav className='nav'>

@@ -28,3 +28,25 @@
         text-decoration: underline;
     }
 }
+
+.nav__toggle {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: transparent;
+    color: $grey;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.nav__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: transparent;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
