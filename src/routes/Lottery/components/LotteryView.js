@@ -1,13 +1,6 @@
 import React from 'react';
-
-function getRandomInt (min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-// custom sort otherwise you'll get 1, 10, 2, 20
-function compareNumbers (a, b) {
-  return a - b;
-}
+import { getRandomInt, compareNumbers } from 'services/utils';
+import Slider from 'components/Slider';
 
 export default class LotteryView extends React.Component {
   state = {
@@ -56,8 +49,7 @@ export default class LotteryView extends React.Component {
   render () {
     return (
       <div className='lottery'>
-
-        <form className='form lottery__options'>
+        <form>
           <label htmlFor='min'>Min</label>
           <input type='number'
             name='min'
@@ -78,21 +70,13 @@ export default class LotteryView extends React.Component {
             onChange={ this.handleChange }
             value={ this.state.max } />
 
-          <label htmlFor='amount'>Amount</label>
-          <input type='range'
-            name='amount'
+          <Slider
+            label='Amount'
+            step='1'
             min='1'
             max='20'
             value={ this.state.amount }
             onChange={ this.handleChange } />
-          <input type='number'
-            name='amount'
-            step='1'
-            min='1'
-            max='20'
-            placeholder='1'
-            onChange={ this.handleChange }
-            value={ this.state.amount } />
         </form>
 
         <button className='button lottery__button' onClick={ this.generate }>Generate</button>

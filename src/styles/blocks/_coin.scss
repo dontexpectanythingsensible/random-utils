@@ -1,0 +1,13 @@
+.coin {
+  margin-bottom: 1rem;
+  width: 30%;
+}
+
+.coins__wrapper {
+  @include output;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 4rem auto;
+}
