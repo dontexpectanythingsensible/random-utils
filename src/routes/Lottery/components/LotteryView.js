@@ -18,7 +18,8 @@ export default class LotteryView extends React.Component {
         val = this.state.min + 1;
       }
 
-      this.setState({ [e.target.name]: +val });
+      this.state[e.target.name] = +val;
+      this.generate();
     }
   }
 

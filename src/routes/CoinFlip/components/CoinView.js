@@ -26,7 +26,9 @@ export default class CoinView extends React.Component {
     let val = +e.target.value;
 
     if (e && e.target && e.target.name) {
-      this.setState({ [e.target.name]: +val });
+      // sync
+      this.state[e.target.name] = +val;
+      this.flip();
     }
   }
 
