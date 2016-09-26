@@ -1,0 +1,33 @@
+.categories__heading {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.categories {
+  max-width: 700px;
+  padding: 0 1rem;
+  margin: auto;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.toggle {
+  display: inline-block;
+  font-size: 1rem;
+  transition: 0.2s ease-out;
+  transform-origin: center center;
+  vertical-align: middle;
+
+  &--open {
+    transform: rotate(-180deg);
+  }
+}
