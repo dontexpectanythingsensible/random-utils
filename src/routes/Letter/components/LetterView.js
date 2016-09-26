@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 
+import CategoryList from 'components/CategoryList';
+
 // TODO: other alphabets
 
 export default class LetterView extends React.Component {
@@ -52,6 +54,8 @@ export default class LetterView extends React.Component {
         </button>
 
         <span className='letter__selected'>{ this.state.letter }</span>
+
+        <CategoryList />
       </div>
     );
   }
