@@ -41,9 +41,9 @@
 }
 
 .nav__close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
+    display: block;
+    padding: 1rem;
+    margin: auto 0 auto auto;
     background: transparent;
     color: $white;
     border: none;
