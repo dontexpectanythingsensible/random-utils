@@ -4,6 +4,7 @@ import CoreLayout from '../layouts/CoreLayout/CoreLayout';
 import Todo from './Todo';
 import Letter from './Letter';
 import Lottery from './Lottery';
+import About from './About';
 // import CounterRoute from './Counter';
 
 /*  Note: Instead of using JSX, we recommend using react-router
@@ -16,7 +17,8 @@ export const createRoutes = (store) => ({
   childRoutes : [
     // CounterRoute(store),
     Todo,
-    Lottery
+    Lottery,
+    About
   ]
 });
 

@@ -40,5 +40,23 @@ describe('(Component) Header', () => {
 
       expect(_wrapper.find(Link).at(1).prop('to')).to.equal('/lottery');
     });
+
+    it('Should render a Link to About route', () => {
+      const link = _wrapper.find(Link).at(2);
+
+      expect(link).to.exist;
+      expect(link.text()).to.match(/About/);
+
+      expect(link.prop('to')).to.equal('/about');
+    });
+
+    it('Should render a link to team generator', () => {
+      const link = _wrapper.find('.nav__external');
+
+      expect(link).to.exist;
+      expect(link.text()).to.match(/Random team generator/);
+
+      expect(link.prop('href')).to.equal('https://jamestease.co.uk/team-generator');
+    });
   });
 });
