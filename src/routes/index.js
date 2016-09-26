@@ -4,6 +4,7 @@ import CoreLayout from '../layouts/CoreLayout/CoreLayout';
 import Todo from './Todo';
 import Letter from './Letter';
 import Lottery from './Lottery';
+import Coin from './CoinFlip';
 import About from './About';
 // import CounterRoute from './Counter';
 
@@ -18,6 +19,7 @@ export const createRoutes = (store) => ({
     // CounterRoute(store),
     Todo,
     Lottery,
+    Coin,
     About
   ]
 });
