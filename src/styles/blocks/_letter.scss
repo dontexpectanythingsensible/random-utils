@@ -1,0 +1,6 @@
+.letter__selected {
+    @include output;
+    display: block;
+    text-align: center;
+    margin: 4rem auto;
+}
