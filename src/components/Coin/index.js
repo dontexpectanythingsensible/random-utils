@@ -1,3 +1,3 @@
-import { Coin } from './coin';
+import { Coin } from './Coin';
 
 export default Coin;
