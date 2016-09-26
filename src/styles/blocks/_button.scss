@@ -1,0 +1,9 @@
+.button {
+    background: $purple;
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid lighten($purple, 10%);
+    border-right: 2px solid lighten($purple, 10%);
+    color: $white;
+}

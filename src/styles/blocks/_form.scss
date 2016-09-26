@@ -1,0 +1,13 @@
+.form {
+    margin: 1rem auto;
+}
+
+label {
+    display: inline-block;
+    margin: 1rem 0.75rem 1rem 1.5rem;
+}
+
+[type="text"],
+[type="number"] {
+    padding: 0.25rem 0.5rem;
+}
