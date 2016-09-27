@@ -1,6 +1,7 @@
 import React from 'react';
 import { getRandomInt, compareNumbers } from 'services/utils';
 import Slider from 'components/Slider';
+import Ad from 'components/Ad';
 
 export default class LotteryView extends React.Component {
   state = {
@@ -50,6 +51,8 @@ export default class LotteryView extends React.Component {
   render () {
     return (
       <div className='lottery'>
+        <Ad />
+
         <form>
           <label htmlFor='min'>Min</label>
           <input type='number'

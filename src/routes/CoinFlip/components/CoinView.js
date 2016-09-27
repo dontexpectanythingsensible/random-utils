@@ -2,6 +2,7 @@ import React from 'react';
 import { getRandomInt } from 'services/utils';
 import Coin from 'components/Coin';
 import Slider from 'components/Slider';
+import Ad from 'components/Ad';
 
 export default class CoinView extends React.Component {
   state = {
@@ -41,6 +42,8 @@ export default class CoinView extends React.Component {
   render () {
     return (
       <div className='coin__view'>
+        <Ad />
+
         <Slider
           label='Amount'
           step='1'

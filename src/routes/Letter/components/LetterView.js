@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import Ad from 'components/Ad';
 
 import CategoryList from 'components/CategoryList';
 
@@ -39,6 +40,8 @@ export default class LetterView extends React.Component {
   render () {
     return (
       <div className='letter__wrapper'>
+        <Ad />
+
         <form className='form letter__options'>
           <label htmlFor='letter__exclude'>
             Letters to exclude
