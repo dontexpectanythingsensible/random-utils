@@ -18,6 +18,12 @@
 // mixin
 @import 'blocks/output';
 
+@mixin device {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+
 // variables
 $grey: #333;
 $purple: #d22ee8;

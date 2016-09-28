@@ -50,8 +50,17 @@ describe('(Component) Header', () => {
       expect(link.prop('to')).to.equal('/coin-flip');
     });
 
-    it('Should render a Link to About route', () => {
+    it('Should render a Link to Dice route', () => {
       const link = _wrapper.find(Link).at(3);
+
+      expect(link).to.exist;
+      expect(link.text()).to.match(/Dice roll/);
+
+      expect(link.prop('to')).to.equal('/dice-roll');
+    });
+
+    it('Should render a Link to About route', () => {
+      const link = _wrapper.find(Link).at(4);
 
       expect(link).to.exist;
       expect(link.text()).to.match(/About/);
