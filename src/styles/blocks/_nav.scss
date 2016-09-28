@@ -7,7 +7,7 @@
     background: $grey;
     z-index: 300;
 
-    @media (max-width: 500px) {
+    @include device {
         width: 100%;
     }
 }

@@ -1,6 +1,10 @@
 .coin {
   margin-bottom: 1rem;
   width: 30%;
+
+  @include device {
+    width: 100%;
+  }
 }
 
 .coins__wrapper {
@@ -9,5 +13,5 @@
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 800px;
-  margin: 4rem auto;
+  margin: 2rem auto;
 }

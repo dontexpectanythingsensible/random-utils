@@ -5,6 +5,7 @@ import Todo from './Todo';
 import Letter from './Letter';
 import Lottery from './Lottery';
 import Coin from './CoinFlip';
+import Dice from './Dice';
 import About from './About';
 // import CounterRoute from './Counter';
 
@@ -20,6 +21,7 @@ export const createRoutes = (store) => ({
     Todo,
     Lottery,
     Coin,
+    Dice,
     About
   ]
 });
