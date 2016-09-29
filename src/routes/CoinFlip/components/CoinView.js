@@ -40,6 +40,15 @@ export default class CoinView extends React.Component {
   }
 
   render () {
+    const headCount = this.state.coins.reduce(function (count, coin) {
+      // console.log(prev, curr);
+      if (coin === 'heads') {
+        return count + 1;
+      }
+
+      return count;
+    }, 0);
+
     return (
       <div className='coin__view'>
         <Ad />
@@ -52,6 +61,13 @@ export default class CoinView extends React.Component {
           value={ this.state.amount }
           onChange={ this.handleChange } />
         <button className='button' onClick={ this.flip }>Again</button>
+
+        { this.state.amount > 3
+        ? <div className='coin__count'>
+          { `heads: ${ headCount }, tails: ${ this.state.coins.length - headCount }` }
+        </div>
+         : null
+       }
 
         <div className='coins__wrapper'>{ this.state.coins.map(this.renderCoin) }</div>
 
