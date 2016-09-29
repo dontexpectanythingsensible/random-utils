@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dontexpectanythingsensible/random-utils.svg?branch=master)](https://travis-ci.org/whostolemyhat/ascii-react)
+
 [Random Number Pickers](https://www.randomnumberpickers.co.uk)
 
 A selection of random number utilities:
