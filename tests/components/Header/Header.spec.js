@@ -45,9 +45,9 @@ describe('(Component) Header', () => {
       const link = _wrapper.find(Link).at(2);
 
       expect(link).to.exist;
-      expect(link.text()).to.match(/Coin flip/);
+      expect(link.text()).to.match(/Coin toss/);
 
-      expect(link.prop('to')).to.equal('/coin-flip');
+      expect(link.prop('to')).to.equal('/coin-toss');
     });
 
     it('Should render a Link to Dice route', () => {
