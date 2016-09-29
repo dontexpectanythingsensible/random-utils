@@ -1,7 +1,6 @@
 import React from 'react';
 import Ad from 'components/Ad';
 import Slider from 'components/Slider';
-// import { getRandomInt } from 'services/utils';
 import Dice from 'components/Dice';
 
 export default class DiceView extends React.Component {
@@ -34,11 +33,11 @@ export default class DiceView extends React.Component {
 
   render () {
     return (
-      <div className='dice'>
+      <div className='dice__wrapper'>
         <Ad />
 
         <Slider
-          label='Number of die'
+          label='Number of dice'
           step='1'
           min='1'
           max='10'
@@ -47,8 +46,9 @@ export default class DiceView extends React.Component {
 
         <button onClick={ this.roll } className='button'>Roll again</button>
 
-        { this.state.dice.map(die => die) }
-
+        <div className='dice__output'>
+          { this.state.dice.map(die => die) }
+        </div>
       </div>
     );
   }

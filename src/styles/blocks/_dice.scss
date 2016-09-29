@@ -1,0 +1,23 @@
+.dice__output {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.dice {
+    display: inline-block;
+    margin: 0 auto 1rem;
+    width: 100%;
+
+    @include device {
+      // width: 30%;
+      margin: auto;
+    }
+}
+
+.dice__value {
+    @include output;
+    display: block;
+}

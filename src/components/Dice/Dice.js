@@ -35,7 +35,9 @@ export default class Dice extends React.Component {
   render () {
     return (
       <div className='dice'>
-        { this.state.value }
+        <span className='dice__value'>{ this.state.value }</span>
+
+        <label>Sides: </label>
         <input type='number'
           step='1'
           min='2'
