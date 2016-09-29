@@ -1,15 +1,17 @@
 import React from 'react';
 
 export const Slider = props => (
-  <div>
+  <div className='slider'>
     <label htmlFor='amount'>{ props.label }</label>
     <input type='range'
+      className='slider__range'
       name='amount'
       min={ props.min }
       max={ props.max }
       value={ props.value }
       onChange={ props.onChange } />
     <input type='number'
+      className='slider__number'
       name='amount'
       step={ props.step }
       min={ props.min }
