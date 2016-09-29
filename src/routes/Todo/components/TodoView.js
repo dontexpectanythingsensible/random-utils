@@ -11,6 +11,8 @@ export const TodoView = () => (
     <li>weighted draws eg raffle, number of tickets</li>
     <li>weighted scores (student grades)</li>
     <li>Dice poker</li>
+    <li>Translations</li>
+    <li>different alphabets letter picker</li>
     <li><strike>link to team</strike></li>
   </ul>
 );
