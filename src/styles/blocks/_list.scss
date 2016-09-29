@@ -1,0 +1,12 @@
+.list__item {
+  @include output;
+}
+
+.list__input {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  padding: 0.5rem;
+  display: block;
+  margin: auto;
+}
