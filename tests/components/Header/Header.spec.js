@@ -63,13 +63,22 @@ describe('(Component) Header', () => {
       const link = _wrapper.find(Link).at(4);
 
       expect(link).to.exist;
-      expect(link.text()).to.match(/List/);
+      expect(link.text()).to.match(/List draw/);
 
       expect(link.prop('to')).to.equal('/list');
     });
 
-    it('Should render a Link to About route', () => {
+    it('Should render a Link to List route', () => {
       const link = _wrapper.find(Link).at(5);
+
+      expect(link).to.exist;
+      expect(link.text()).to.match(/Weighted list draw/);
+
+      expect(link.prop('to')).to.equal('/weighted-list');
+    });
+
+    it('Should render a Link to About route', () => {
+      const link = _wrapper.find(Link).at(6);
 
       expect(link).to.exist;
       expect(link.text()).to.match(/About/);
