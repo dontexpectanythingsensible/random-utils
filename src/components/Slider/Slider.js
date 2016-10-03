@@ -27,6 +27,6 @@ Slider.propTypes = {
   value: React.PropTypes.number.isRequired,
   step: React.PropTypes.string.isRequired,
   min: React.PropTypes.string.isRequired,
-  max: React.PropTypes.string.isRequired,
+  max: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number.isRequired]).isRequired,
   onChange: React.PropTypes.func.isRequired
 };
