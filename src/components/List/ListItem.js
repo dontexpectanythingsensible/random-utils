@@ -33,13 +33,14 @@ export default class ListItem extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='listitem'>
         <input type='text'
           placeholder='Name'
           value={ this.state.text }
           ref='text'
           onChange={ this.handleChange } />
         <input type='number'
+          className='listitem__number'
           min='1'
           step='1'
           value={ this.state.number }
