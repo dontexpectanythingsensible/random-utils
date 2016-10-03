@@ -42,6 +42,9 @@ export default class LetterView extends React.Component {
       <div className='letter__wrapper'>
         <Ad />
 
+        <p className='about'>A random letter is picked for you. Enter any letters you would like
+        to exlude in the text box. There are also a selection of categories to play scattergories.</p>
+
         <form className='form letter__options'>
           <label htmlFor='letter__exclude'>
             Letters to exclude

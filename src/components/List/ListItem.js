@@ -46,7 +46,7 @@ export default class ListItem extends React.Component {
           ref='number'
           onChange={ this.handleChange } />
 
-        <button onClick={ this.handleRemove }>Remove</button>
+        <button onClick={ this.handleRemove } className='button button--remove'>Remove</button>
       </div>
     );
   }

@@ -14,11 +14,12 @@ export default class ListView extends React.Component {
   }
 
   handleTextChange = updated => {
-    // reference to state - updates in-place
-    const items = this.state.items;
+    const items = _.clone(this.state.items);
     let item = items.filter(item => item.id === updated.id)[0];
     item.number = updated.number;
     item.text = updated.text;
+
+    this.setState({ items });
   }
 
   randomise = e => {
@@ -87,8 +88,11 @@ export default class ListView extends React.Component {
       <div className='list__view'>
         <Ad />
 
+        <p className='about'>This draws items from a list based on weightings; for instance, an item
+        with weighting '3' is three times as likely to be drawn as an item with weighting '1'.</p>
+
         { this.renderListItems() }
-        <button onClick={ this.addItem }>Another</button>
+        <button onClick={ this.addItem } className='button button--add'>Add another</button>
 
         <Slider
           label='Number to draw'

@@ -1,10 +1,31 @@
-.button {
-    background: $purple;
+@mixin button($colour: $purple) {
+    background: $colour;
     border-radius: 3px;
     border: none;
-    padding: 0.5rem 1rem;
-    border-bottom: 2px solid lighten($purple, 10%);
-    border-right: 2px solid lighten($purple, 10%);
+    padding: 0.4rem 1rem;
+    border-top: 2px solid $colour;
+    border-bottom: 2px solid darken($colour, 15%);
     color: $white;
     cursor: pointer;
+
+    &:hover {
+      background: darken($colour, 10%);
+      border-top: 2px solid darken($colour, 10%);
+      border-bottom: 2px solid darken($colour, 10%);
+    }
+}
+
+.button {
+  @include button;
+}
+
+.button--add {
+  @include button($blue);
+  margin: 1rem auto;
+}
+
+.button--remove {
+  @include button($red);
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
 }

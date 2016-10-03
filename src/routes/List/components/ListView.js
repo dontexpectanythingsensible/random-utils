@@ -36,6 +36,9 @@ export default class ListView extends React.Component {
       <div className='list__view'>
         <Ad />
 
+        <p className='about'>Enter a list in the text area, one item per line. The list will be randomised, and
+        the required number of entries will then be drawn.</p>
+
         <textarea className='list__input'
           placeholder='One entry per line'
           onChange={ this.handleTextChange } />
