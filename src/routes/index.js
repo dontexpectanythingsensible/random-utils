@@ -7,6 +7,7 @@ import Lottery from './Lottery';
 import Coin from './CoinFlip';
 import Dice from './Dice';
 import List from './List';
+import WeightedList from './WeightedList';
 import About from './About';
 // import CounterRoute from './Counter';
 
@@ -24,6 +25,7 @@ export const createRoutes = (store) => ({
     Coin,
     Dice,
     List,
+    WeightedList,
     About
   ]
 });
