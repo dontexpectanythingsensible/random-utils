@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import sinon from 'sinon';
 
 import Ad from 'components/Ad';
 import ListView from 'routes/RandomList/components/RandomList';
