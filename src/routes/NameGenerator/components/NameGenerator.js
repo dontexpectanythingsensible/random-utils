@@ -1,5 +1,6 @@
 import React from 'react';
 import { getRandomInt } from 'services/utils';
+import Ad from 'components/Ad';
 
 /* eslint-disable max-len */
 const prefixes = ['Asylum', 'Bell', 'Black', 'Capra', 'Ceaseless', 'Centipede', 'Chaos', 'Crossbreed', 'Dark Sun', 'Slayer', 'Executioner', 'Gaping', 'Gravelord', 'Iron', 'Cinder', 'Father', 'Abyss', 'Moonlight', 'Sanctuary', 'Stray', 'Taurus', 'Armoured', 'Golden', 'Crystal', 'Giant', 'Undead', 'Giant Undead', 'Hellkite', 'Parasitic', 'Prowling', 'Prince', 'Grey', 'Maneater', 'Iron', 'Paladin', 'Xanthous', 'Marvellous', 'Big Hat', 'Black Iron', 'Crestfallen', 'Darkstalker', 'Gravelord', 'Hawkeye', 'Kingseeker', 'Lord\'s Blade', 'Stone', 'Silent', 'Belfry', 'Captain', 'Emerald', 'Grave Warden', 'Lonesome', 'Manscorpion', 'Hag', 'Mild Mannered', 'Royal', 'Sorcerer', 'Sparkling', 'Steady Hand', 'Old', 'Ruin', 'Old Iron', 'Covetous', 'Baleful', 'Prowling', 'Ancient', 'Burnt', 'Slumbering', 'Ivory', 'Fume', 'Sir', 'Nameless', 'Pilgrim', 'Jester', 'Ashen', 'Abbess', 'Rapacious', 'Drifter', 'Woodland Child', 'Peculiar', 'Holy', 'Yellowfinger', 'Longfinger', 'Knight-Slayer', 'Curse-Rotted', 'Deacon', 'High Lord', 'Old Demon', 'Pontiff', 'Boreal', 'Unbreakable', 'Ringfinger'];
@@ -10,70 +11,87 @@ const nicknames = ['the Scaleless', 'the Great', 'the Rock', 'the Crow', 'the Ca
 
 export default class NameGenerator extends React.Component {
   state= {
-    bossName: 'Brian'
+    name: 'Brian',
+    bossName: ''
+  }
+
+  componentWillMount () {
+    this.getName();
+  }
+
+  handleChange = e => {
+    let val = e.target.value;
+    if (val === '') {
+      val = 'Brian';
+    }
+
+    this.setState({ name: e.target.value });
   }
 
   getName = () => {
     let out;
-    const name = 'Brian';
+    const name = this.state.name;
+
+    const prefix = prefixes[getRandomInt(0, prefixes.length - 1)];
+    const type = types[getRandomInt(0, types.length - 1)];
+    const nickname = nicknames[getRandomInt(0, nicknames.length - 1)];
+    const suffix = suffixes[getRandomInt(0, suffixes.length - 1)];
 
     switch (getRandomInt(1, 10)) {
-      /* eslint-disable max-len */
       case 1:
       // prefix type
-        out = `${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ types[getRandomInt(0, types.length - 1)] }`;
+        out = `${ prefix } ${ type }`;
         break;
 
       // prefix name
       case 2:
-        out = `${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ name }`;
+        out = `${ prefix } ${ name }`;
         break;
 
       // name nickname prefix type
       case 3:
-        out = `${ name } ${ nicknames[getRandomInt(0, nicknames.length - 1)] }, ${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ types[getRandomInt(0, types.length - 1)] }`;
+        out = `${ name } ${ nickname }, ${ prefix } ${ type }`;
         break;
 
       // name, type suffix
       case 4:
-        out = `${ name }, ${ types[getRandomInt(0, types.length - 1)] } ${ suffixes[getRandomInt(0, suffixes.length - 1)] } `;
+        out = `${ name }, ${ type } ${ suffix } `;
         break;
 
       // name suffix
       case 5:
-        out = `${ name } ${ suffixes[getRandomInt(0, suffixes.length - 1)] }`;
+        out = `${ name } ${ suffix }`;
         break;
 
       // name nickname suffix
       case 6:
-        out = `${ name } ${ nicknames[getRandomInt(0, nicknames.length - 1)] } ${ suffixes[getRandomInt(0, suffixes.length - 1)] }`;
+        out = `${ name } ${ nickname } ${ suffix }`;
         break;
 
       // prefix type name
       case 7:
-        out = `${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ types[getRandomInt(0, types.length - 1)] } ${ name }`;
+        out = `${ prefix } ${ type } ${ name }`;
         break;
 
       // prefix name nickname
       case 8:
-        out = `${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ name } ${ nicknames[getRandomInt(0, nicknames.length - 1)] }`;
+        out = `${ prefix } ${ name } ${ nickname }`;
         break;
 
       // prefix name, type suffix
       case 9:
-        out = `${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ name }, ${ types[getRandomInt(0, types.length - 1)] } ${ suffixes[getRandomInt(0, suffixes.length - 1)] }`;
+        out = `${ prefix } ${ name }, ${ type } ${ suffix }`;
         break;
 
       // name nickname type
       case 10:
-        out = `${ name }, ${ nicknames[getRandomInt(0, nicknames.length - 1)] } ${ types[getRandomInt(0, types.length - 1)] }`;
+        out = `${ name }, ${ nickname } ${ type }`;
         break;
 
       // name type
       case 11:
-        out = `${ types[getRandomInt(0, types.length - 1)] } ${ name }`;
+        out = `${ type } ${ name }`;
         break;
-      /* eslint-enable max-len */
     }
 
     this.setState({ bossName: out });
@@ -81,7 +99,14 @@ export default class NameGenerator extends React.Component {
 
   render () {
     return (
-      <div>{ this.state.bossName } <button onClick={ this.getName }>Another</button></div>
+      <div className='names'>
+        <Ad />
+
+        <input type='text' name='name' placeholder='Brian' value={ this.state.name } onChange={ this.handleChange } />
+        <button onClick={ this.getName } className='button'>Another</button>
+
+        <p className='list__item'>{ this.state.bossName }</p>
+      </div>
     );
   }
 }

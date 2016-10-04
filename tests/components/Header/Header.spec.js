@@ -90,7 +90,7 @@ describe('(Component) Header', () => {
       const link = _wrapper.find(Link).at(7);
 
       expect(link).to.exist;
-      expect(link.text()).to.match(/Dark Souls boss name generator/);
+      expect(link.text()).to.match(/Dark Souls name generator/);
 
       expect(link.prop('to')).to.equal('/dark-souls-name-generator');
     });

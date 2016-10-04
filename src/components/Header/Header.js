@@ -37,7 +37,7 @@ export default class Header extends React.Component {
               </li>
               <li>
                 <Link to='/dark-souls-name-generator' activeClassName='route--active' onClick={ this.toggle }>
-                  Dark Souls boss name generator
+                  Dark Souls name generator
                 </Link>
               </li>
               <li><Link to='/about' activeClassName='route--active' onClick={ this.toggle }>About</Link></li>
