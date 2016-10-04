@@ -7,35 +7,6 @@ phantoms
 npc
 ["Alvina of the Darkroot Wood", "Anastacia of Astora", "Andre of Astora", "Big Hat Logan", "Black Iron Tarkus", "Crestfallen Merchant", "Crestfallen Warrior", "Dark Sun Gwyndolin", "Darkstalker Kaathe", "Domhnall of Zena", "Dusk of Oolacile", "Eingyi", "Elizabeth", "Giant Blacksmith", "Gravelord Nito", "Griggs of Vinheim", "Gwynevere, Princess of Sunlight", "Hawkeye Gough", "Ingward", "Kingseeker Frampt", "Kirk, Knight of Thorns", "Knight Lautrec of Carim", "Lady of the Darkling", "Laurentius of the Great Swamp", "Lord's Blade Ciaran", "Maneater Mildred", "Marvellous Chester", "Oscar, Knight of Astora", "Oswald of Carim", "Paladin Leeroy", "Patches", "Petrus of Thorolund", "Quelaag's Sister", "Quelana of Izalith", "Rhea of Thorolund", "Rickert of Vinheim", "Shiva of the East", "Sieglinde of Catarina", "Siegmeyer of Catarina", "Sif, the Great Grey Wolf", "Snuggly the Crow", "Solaire of Astora", "Stone Dragon", "Undead Merchant (Female)", "Undead Merchant (Male)", "Vamos", "Vince and Nico of Thorolund", "Witch Beatrice", "Xanthous King, Jeremiah"]
 
-
-prefixes
-["Asylum", "Bell", "Black", "Capra", "Ceaseless", "Centipede", "Chaos", "Witch", "Dragon", "Crossbreed", "Dark Sun", "Demon", "Slayer", "Executioner", "Gaping", "Gravelord", "Lord", "Iron", "Cinder", "Knight", "Father", "Abyss", "Moonlight", "Sanctuary", "Stray", "Taurus", "Armoured", "Golden", "Crystal", "Giant", "Undead", "Giant Undead", "Hellkite", "Parasitic", "Prowling", "Prince", "Grey", "Maneater", "Iron", "Paladin", "Xanthous", "Marvellous", "Big Hat", "Black Iron", "Crestfallen", "Darkstalker", "Gravelord", "Hawkeye", "Kingseeker", "Lord's Blade", "Stone"]
-
-type
-["Demon", "Gargoyle", "Dragon", "Witch", "Golem", "Knight", "Wolf", "Butcher", "Tusk", "Golem", "Rat", "Hydra", "Wall Hugger", "Prince", "Slayer", "King", "Blacksmith", "Princess", "Merchant"]
-
-suffix
-["of Chaos", "of the Abyss", "of Cinder", "of Thorns", "of the Darkroot Wood", "of Astora", "of Zena", "of Oolacile", "of Vinheim", "of Sunlight", "of Carim", "of the Great Swamp", "of Thorolund", "of Izalith", "of the East", "of Catarina"]
-
-nickname
-["the Scaleless", "the Great", "the Rock", "the Crow"]
-
-forms
-prefix type
-prefix name
-type name
-name type suffix
-name suffix
-prefix type name
-name nickname
-prefix name, type suffix
-prefix suffix
-
-
-
-
-
-
 ds2 npx
 ["Aldia, Scholar of the First Sin", "Alsanna, Silent Oracle", "Belfry Guard", "Benhart of Jugo", "Blacksmith Lenigrast", "Blue Sentinel Targray", "Cale the Cartographer", "Captain Drummond", "Carhillion of the Fold", "Chancellor Wellager", "Creighton the Wanderer", "Cromwell the Pardoner", "Darkdiver Grandahl", "Emerald Herald", "Felkin the Outcast", "Grave Warden Agdayne", "Griant", "Head of Vengarl", "Housekeeper Milibeth", "Laddersmith Gilligan", "Licia of Lindeldt", "Lonesome Gavlan", "Loyce Knight", "Lucatiel of Mirrah", "Magerold of Lanafir", "Manscorpion Tark", "Maughlin the Armourer", "Merchant Hag Melentia", "Mild Mannered Pate", "Milfanito", "Morrel", "Rosabeth of Melfia", "Royal Sorcerer Navlaan", "Saulden, the Crestfallen Warrior", "Sparkling Sisters Dyna and Tillo", "Steady Hand McDuff", "Stone Trader Chloanne", "Straid of Olaphis", "Strowen", "Sweet Shalquoir", "The Rat King", "Titchy Gren", "Vendrick", "Weaponsmith Ornifex"]
 
@@ -53,6 +24,36 @@ bosses
 
 npc
 ["Anri of Astora", "Blacksmith Andre", "Cornyx of the Great Swamp", "Emma, High Priestess of Lothric Castle", "Eygon of Carim", "Fire Keeper", "Greirat of the Undead Settlement", "Hawkwood the Deserter", "Horace the Hushed", "Irina of Carim", "Karla", "Ludleth of Courland", "Orbeck of Vinheim", "Pickle Pee", "Ringfinger Leonhard", "Rosaria, Mother of Rebirth", "Shrine Handmaid", "Siegward of Catarina", "Sirris of the Sunless Realms", "Unbreakable Patches", "Yoel of Londor", "Yuria of Londor"]
+
+
+
+
+prefixes
+["Asylum", "Bell", "Black", "Capra", "Ceaseless", "Centipede", "Chaos", "Witch", "Dragon", "Crossbreed", "Dark Sun", "Demon", "Slayer", "Executioner", "Gaping", "Gravelord", "Lord", "Iron", "Cinder", "Knight", "Father", "Abyss", "Moonlight", "Sanctuary", "Stray", "Taurus", "Armoured", "Golden", "Crystal", "Giant", "Undead", "Giant Undead", "Hellkite", "Parasitic", "Prowling", "Prince", "Grey", "Maneater", "Iron", "Paladin", "Xanthous", "Marvellous", "Big Hat", "Black Iron", "Crestfallen", "Darkstalker", "Gravelord", "Hawkeye", "Kingseeker", "Lord's Blade", "Stone", "Silent", "Belfry", "Captain", "Emerald", "Grave Warden", "Lonesome", "Manscorpion", "Hag", "Mild Mannered", "Royal", "Sorcerer", "Sparkling", "Steady Hand", "Old", "Ruin", "Old Iron", "Covetous", "Baleful", "Prowling", "Ancient", "Burnt", "Slumbering", "Ivory", "Fume", "Sir", "Nameless", "Pilgrim", "Jester", "Ashen", "Abbess", "Rapacious", "Drifter", "Woodland Child", "Peculiar", "Holy", "Yellowfinger", "Longfinger", "Knight-Slayer", "Curse-Rotted", "Deacon", "High Lord", "Old Demon", "Pontiff", "Boreal", "Unbreakable", "Ringfinger"]
+
+type
+["Demon", "Gargoyle", "Dragon", "Witch", "Golem", "Knight", "Wolf", "Butcher", "Tusk", "Golem", "Rat", "Hydra", "Wall Hugger", "Prince", "Slayer", "King", "Blacksmith", "Princess", "Merchant", "Scholar", "Oracle", "Guard", "Captain", "Chancellor", "Herald", "Housekeeper", "Laddersmith", "Manscorpion", "Warrior", "Trader", "Lord", "Sentinel", "Queen", "Ogre", "Denizen", "Seeker", "Watcher", "Devourer", "Outrider Knight", "High Priestess", "Mother"]
+
+suffix
+["of Chaos", "of the Abyss", "of Cinder", "of Thorns", "of the Darkroot Wood", "of Astora", "of Zena", "of Oolacile", "of Vinheim", "of Sunlight", "of Carim", "of the Great Swamp", "of Thorolund", "of Izalith", "of the East", "of Catarina", "of the First Sin", "of Jugo", "of Mirrah", "of Lanafir", "of Olaphis", "of Song", "of Londor", "of the Spurned", "of the Sunless Realms", "of Carim", "of the Boreal Valley", "of the Deep"]
+
+nickname
+["the Scaleless", "the Great", "the Rock", "the Crow", "the Cartographer", "the Wanderer", "the Pardoner", "the Outcast", "the Armourer", "the Crestfallen", "the Lost", "the Ruined", "the Baleful", "the King's Pet", "the Squalid", "the Explorer", "the Butcher", "the Deserter", "the Hushed", "the Giant", "the Consumed", "of Lothric Castle", "of Courland", "of Rebirth"]
+
+forms
+prefix type
+prefix name
+type name
+name type suffix
+name suffix
+prefix type name
+name nickname
+prefix name, type suffix
+prefix suffix
+
+
+
+
 
 everything
 

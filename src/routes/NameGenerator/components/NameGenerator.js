@@ -1,10 +1,10 @@
 import React from 'react';
 import { getRandomInt } from 'services/utils';
 
-const prefixes = ["Asylum", "Bell", "Black", "Capra", "Ceaseless", "Centipede", "Chaos", "Witch", "Dragon", "Crossbreed", "Dark Sun", "Demon", "Slayer", "Executioner", "Gaping", "Gravelord", "Lord", "Iron", "Cinder", "Knight", "Father", "Abyss", "Moonlight", "Sanctuary", "Stray", "Taurus", "Armoured", "Golden", "Crystal", "Giant", "Undead", "Giant Undead", "Hellkite", "Parasitic", "Prowling", "Prince", "Grey", "Maneater", "Iron", "Paladin", "Xanthous", "Marvellous", "Big Hat", "Black Iron", "Crestfallen", "Darkstalker", "Gravelord", "Hawkeye", "Kingseeker", "Lord's Blade", "Stone"];
-const types = ["Demon", "Gargoyle", "Dragon", "Witch", "Golem", "Knight", "Wolf", "Butcher", "Tusk", "Golem", "Rat", "Hydra", "Wall Hugger", "Prince", "Slayer", "King", "Blacksmith", "Princess", "Merchant"];
-const suffixes = ["of Chaos", "of the Abyss", "of Cinder", "of Thorns", "of the Darkroot Wood", "of Astora", "of Zena", "of Oolacile", "of Vinheim", "of Sunlight", "of Carim", "of the Great Swamp", "of Thorolund", "of Izalith", "of the East", "of Catarina"];
-const nicknames = ["the Scaleless", "the Great", "the Rock", "the Crow"];
+const prefixes = ["Asylum", "Bell", "Black", "Capra", "Ceaseless", "Centipede", "Chaos", "Witch", "Dragon", "Crossbreed", "Dark Sun", "Demon", "Slayer", "Executioner", "Gaping", "Gravelord", "Lord", "Iron", "Cinder", "Knight", "Father", "Abyss", "Moonlight", "Sanctuary", "Stray", "Taurus", "Armoured", "Golden", "Crystal", "Giant", "Undead", "Giant Undead", "Hellkite", "Parasitic", "Prowling", "Prince", "Grey", "Maneater", "Iron", "Paladin", "Xanthous", "Marvellous", "Big Hat", "Black Iron", "Crestfallen", "Darkstalker", "Gravelord", "Hawkeye", "Kingseeker", "Lord's Blade", "Stone", "Silent", "Belfry", "Captain", "Emerald", "Grave Warden", "Lonesome", "Manscorpion", "Hag", "Mild Mannered", "Royal", "Sorcerer", "Sparkling", "Steady Hand", "Old", "Ruin", "Old Iron", "Covetous", "Baleful", "Prowling", "Ancient", "Burnt", "Slumbering", "Ivory", "Fume", "Sir", "Nameless", "Pilgrim", "Jester", "Ashen", "Abbess", "Rapacious", "Drifter", "Woodland Child", "Peculiar", "Holy", "Yellowfinger", "Longfinger", "Knight-Slayer", "Curse-Rotted", "Deacon", "High Lord", "Old Demon", "Pontiff", "Boreal", "Unbreakable", "Ringfinger"];
+const types = ["Demon", "Gargoyle", "Dragon", "Witch", "Golem", "Knight", "Wolf", "Butcher", "Tusk", "Golem", "Rat", "Hydra", "Wall Hugger", "Prince", "Slayer", "King", "Blacksmith", "Princess", "Merchant", "Scholar", "Oracle", "Guard", "Captain", "Chancellor", "Herald", "Housekeeper", "Laddersmith", "Manscorpion", "Warrior", "Trader", "Lord", "Sentinel", "Queen", "Ogre", "Denizen", "Seeker", "Watcher", "Devourer", "Outrider Knight", "High Priestess", "Mother"];
+const suffixes = ["of Chaos", "of the Abyss", "of Cinder", "of Thorns", "of the Darkroot Wood", "of Astora", "of Zena", "of Oolacile", "of Vinheim", "of Sunlight", "of Carim", "of the Great Swamp", "of Thorolund", "of Izalith", "of the East", "of Catarina", "of the First Sin", "of Jugo", "of Mirrah", "of Lanafir", "of Olaphis", "of Song", "of Londor", "of the Spurned", "of the Sunless Realms", "of Carim", "of the Boreal Valley", "of the Deep"];
+const nicknames = ["the Scaleless", "the Great", "the Rock", "the Crow", "the Cartographer", "the Wanderer", "the Pardoner", "the Outcast", "the Armourer", "the Crestfallen", "the Lost", "the Ruined", "the Baleful", "the King's Pet", "the Squalid", "the Explorer", "the Butcher", "the Deserter", "the Hushed", "the Giant", "the Consumed", "of Lothric Castle", "of Courland", "of Rebirth"];
 
 export default class NameGenerator extends React.Component {
   state= {
@@ -54,6 +54,11 @@ export default class NameGenerator extends React.Component {
       // name nickname prefix type
       case 3:
         out = `${ name } ${ nicknames[getRandomInt(0, nicknames.length - 1)] } ${ prefixes[getRandomInt(0, prefixes.length - 1)] } ${ types[getRandomInt(0, types.length - 1)] }`;
+        break;
+
+      // name nickname type
+      case 3:
+        out = `${ name }, ${ nicknames[getRandomInt(0, nicknames.length - 1)] } ${ types[getRandomInt(0, types.length - 1)] }`;
         break;
 
       // prefix name, type suffix
