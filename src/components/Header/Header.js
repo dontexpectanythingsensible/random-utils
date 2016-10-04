@@ -35,6 +35,11 @@ export default class Header extends React.Component {
               <li>
                 <Link to='/randomise-list' activeClassName='route--active' onClick={ this.toggle }>Randomise list</Link>
               </li>
+              <li>
+                <Link to='/dark-souls-name-generator' activeClassName='route--active' onClick={ this.toggle }>
+                  Dark Souls name generator
+                </Link>
+              </li>
               <li><Link to='/about' activeClassName='route--active' onClick={ this.toggle }>About</Link></li>
               <li>
                 <a href='https://jamestease.co.uk/team-generator' className='nav__external'>Random team generator</a>

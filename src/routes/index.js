@@ -9,6 +9,7 @@ import Dice from './Dice';
 import List from './List';
 import WeightedList from './WeightedList';
 import RandomList from './RandomList';
+import NameGenerator from './NameGenerator';
 import About from './About';
 // import CounterRoute from './Counter';
 
@@ -28,6 +29,7 @@ export const createRoutes = (store) => ({
     List,
     WeightedList,
     RandomList,
+    NameGenerator,
     About
   ]
 });

@@ -86,8 +86,17 @@ describe('(Component) Header', () => {
       expect(link.prop('to')).to.equal('/randomise-list');
     });
 
-    it('Should render a Link to About route', () => {
+    it('Should render a Link to Name generator route', () => {
       const link = _wrapper.find(Link).at(7);
+
+      expect(link).to.exist;
+      expect(link.text()).to.match(/Dark Souls name generator/);
+
+      expect(link.prop('to')).to.equal('/dark-souls-name-generator');
+    });
+
+    it('Should render a Link to About route', () => {
+      const link = _wrapper.find(Link).at(8);
 
       expect(link).to.exist;
       expect(link.text()).to.match(/About/);
