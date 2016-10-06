@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 import Ad from 'components/Ad';
 import EightBall from 'routes/EightBall/components/EightBall';
 
