@@ -13,6 +13,8 @@ export const TodoView = () => (
     <li>Dice poker</li>
     <li>Translations</li>
     <li>different alphabets letter picker</li>
+    <li>404</li>
+    <li>About</li>
     <li><strike>link to team</strike></li>
   </ul>
 );

@@ -1,7 +1,7 @@
 import AboutView from './components/AboutView';
 
 const route = {
-  path: 'about',
+  path: '*',
   component: AboutView
 };
 
