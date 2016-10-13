@@ -1,6 +1,4 @@
-// We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/CoreLayout/CoreLayout';
-// import Home from './HomeView';
 import Todo from './Todo';
 import Letter from './Letter';
 import Lottery from './Lottery';
