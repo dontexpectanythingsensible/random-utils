@@ -37,7 +37,7 @@ export default class NameGenerator extends React.Component {
     const nickname = nicknames[getRandomInt(0, nicknames.length - 1)];
     const suffix = suffixes[getRandomInt(0, suffixes.length - 1)];
 
-    switch (getRandomInt(1, 10)) {
+    switch (getRandomInt(1, 11)) {
       case 1:
       // prefix type
         out = `${ prefix } ${ type }`;
